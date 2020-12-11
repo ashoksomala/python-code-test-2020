@@ -1,3 +1,12 @@
+##Run all the commands inside the "moviedb" folder.
+
+I used sqlite3 as db. so you will have to do the migrations before running the docker
+
+# python manage.py makemigrations
+# python manage.py migrate
+
+
+
 The goal of this exercise is to test if you know your way around developing
 REST APIs in Python using docker. You can use any rest framework and database
 of your choice. Approach it the way you would an actual long-term project.
@@ -40,7 +49,7 @@ Nice to have:
 
 ****
 
-Run the docker compose file inside the moviedb folder.
+##Run the docker compose file inside the moviedb folder.
 
 Once you make the application running via docker-compose up ,
 
