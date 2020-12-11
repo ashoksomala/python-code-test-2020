@@ -35,3 +35,15 @@ Nice to have:
 * Design and implement a separate CRUD API for these text comments.
 * Ability to filter episodes where `imdbRating` is greater than 8.8 for a season or for all seasons.
 * Write some unit tests
+
+
+
+****
+
+Run the docker compose file inside the moviedb folder.
+
+Once you make the application running via docker-compose up ,
+
+to import the data
+http://localhost:8000/import-data
+

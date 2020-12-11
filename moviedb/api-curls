@@ -1,0 +1,60 @@
+---import data--
+
+http://localhost:8000/import-data
+
+---- get episodes--
+
+curl -X GET \
+  http://localhost:8000/episodes \
+
+
+--- get episode details--
+
+
+curl -X GET \
+  http://localhost:8000/episodes/tt1480055 \
+
+
+
+--- filter by rating & episode  ---
+
+curl -X GET \
+  'http://localhost:8000/episodes?rating_gt=8&season=2' \
+
+
+--- get episodes with filters and pagination ---
+
+curl -X GET \
+  'http://localhost:8000/episodes?rating_gt=4&page=1&limit=4' \
+
+
+
+ -- add comment to an episode ---
+
+curl -X POST \
+  http://localhost:8000/comment/tt1480055 \
+  -H 'content-type: application/json' \
+  -d '{"text":"good episodes"}'
+
+
+--- get comments for an episode --
+
+curl -X GET \
+  http://localhost:8000/comment/tt1480055 \
+
+
+
+--- update comment ---
+
+curl -X PUT \
+  http://localhost:8000/comment-entity/1 \
+  -H 'content-type: application/json' \
+  -d '{"text":"good one"}'
+
+
+
+---   delete comment ---
+
+
+curl -X DELETE \
+  http://localhost:8000/comment-entity/1 \
